@@ -1,4 +1,4 @@
-package domain;
+package domain.game;
 
 public record Result(Player winner) {
     public static final Result TIE = new Result(null);

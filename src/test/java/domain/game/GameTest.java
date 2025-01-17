@@ -1,6 +1,5 @@
-import domain.Game;
-import domain.Player;
-import domain.Result;
+package domain.game;
+
 import domain.Symbol;
 import org.assertj.core.api.ObjectAssert;
 import org.junit.jupiter.api.Test;

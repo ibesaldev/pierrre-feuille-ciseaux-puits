@@ -1,4 +1,4 @@
-package domain;
+package domain.game;
 
 public record Game(Player player1, Player player2) {
     public Result play() {
