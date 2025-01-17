@@ -2,14 +2,26 @@ package domain;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.EnumSource;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.List;
 import java.util.stream.Stream;
 
+import static domain.utils.Assert.assertIsTie;
 import static domain.utils.Assert.assertWinner;
 
 class GameLoopTest {
+
+    @ParameterizedTest
+    @EnumSource(Symbol.class)
+    void sameSymbolShouldReturnTie(Symbol symbol) {
+        Strategy strategy1 = new Strategy(List.of(symbol));
+        Strategy strategy2 = new Strategy(List.of(symbol));
+
+        assertIsTie(new GameLoop(strategy1, strategy2).run());
+        assertIsTie(new GameLoop(strategy2, strategy1).run());
+    }
 
     @ParameterizedTest
     @MethodSource("onlyOneSymbolStrategies")
