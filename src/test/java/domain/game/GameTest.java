@@ -1,8 +1,6 @@
 package domain.game;
 
-import domain.Result;
 import domain.Symbol;
-import org.assertj.core.api.ObjectAssert;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.EnumSource;
@@ -10,7 +8,8 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static domain.utils.Assert.assertIsTie;
+import static domain.utils.Assert.assertWinner;
 
 class GameTest {
 
@@ -43,15 +42,5 @@ class GameTest {
                 Arguments.of(Symbol.WELL, Symbol.ROCK),
                 Arguments.of(Symbol.WELL, Symbol.SCISSORS)
         );
-    }
-
-    private void assertIsTie(Result<Player> result) {
-        assertThat(result.isTie()).isTrue();
-        assertThat(result.winner()).isNull();
-    }
-
-    private ObjectAssert<Player> assertWinner(Result<Player> result) {
-        assertThat(result.isTie()).isFalse();
-        return assertThat(result.winner());
     }
 }
