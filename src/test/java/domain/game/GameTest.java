@@ -1,5 +1,6 @@
 package domain.game;
 
+import domain.Result;
 import domain.Symbol;
 import org.assertj.core.api.ObjectAssert;
 import org.junit.jupiter.api.Test;
@@ -74,12 +75,12 @@ class GameTest {
         assertIsTie(new Game(player2, player1).play());
     }
 
-    private void assertIsTie(Result result) {
+    private void assertIsTie(Result<Player> result) {
         assertThat(result.isTie()).isTrue();
         assertThat(result.winner()).isNull();
     }
 
-    private ObjectAssert<Player> assertWinner(Result result) {
+    private ObjectAssert<Player> assertWinner(Result<Player> result) {
         assertThat(result.isTie()).isFalse();
         return assertThat(result.winner());
     }
