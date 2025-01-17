@@ -30,9 +30,36 @@ class GameTest {
     }
 
     @Test
+    void paperShouldWinAgainstWell() {
+        Player player1 = new Player(Symbol.PAPER);
+        Player player2 = new Player(Symbol.WELL);
+
+        assertWinner(new Game(player1, player2).play()).isEqualTo(player1);
+        assertWinner(new Game(player2, player1).play()).isEqualTo(player1);
+    }
+
+    @Test
     void scissorsShouldWinAgainstPaper() {
         Player player1 = new Player(Symbol.SCISSORS);
         Player player2 = new Player(Symbol.PAPER);
+
+        assertWinner(new Game(player1, player2).play()).isEqualTo(player1);
+        assertWinner(new Game(player2, player1).play()).isEqualTo(player1);
+    }
+
+    @Test
+    void wellShouldWinAgainstRock() {
+        Player player1 = new Player(Symbol.WELL);
+        Player player2 = new Player(Symbol.ROCK);
+
+        assertWinner(new Game(player1, player2).play()).isEqualTo(player1);
+        assertWinner(new Game(player2, player1).play()).isEqualTo(player1);
+    }
+
+    @Test
+    void wellShouldWinAgainstScissors() {
+        Player player1 = new Player(Symbol.WELL);
+        Player player2 = new Player(Symbol.SCISSORS);
 
         assertWinner(new Game(player1, player2).play()).isEqualTo(player1);
         assertWinner(new Game(player2, player1).play()).isEqualTo(player1);
