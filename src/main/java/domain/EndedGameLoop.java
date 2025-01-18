@@ -21,6 +21,10 @@ public record EndedGameLoop(int nbOfWins1, int nbOfWins2, int nbOfTies, Strategy
         return (double) nbOfWins2 / nbOfGames() * 100;
     }
 
+    public double tieRate() {
+        return (double) nbOfTies / nbOfGames() * 100;
+    }
+
     private int nbOfGames() {
         return nbOfWins1 + nbOfWins2 + nbOfTies;
     }
