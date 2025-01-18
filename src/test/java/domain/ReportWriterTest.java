@@ -1,5 +1,8 @@
 package domain;
 
+import domain.loop.EndedGameLoop;
+import domain.loop.Strategy;
+import domain.report.ReportWriter;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;

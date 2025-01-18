@@ -1,5 +1,7 @@
 package domain;
 
+import domain.loop.EndedGameLoop;
+import domain.loop.Strategy;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

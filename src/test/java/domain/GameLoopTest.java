@@ -1,5 +1,8 @@
 package domain;
 
+import domain.loop.EndedGameLoop;
+import domain.loop.GameLoop;
+import domain.loop.Strategy;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;

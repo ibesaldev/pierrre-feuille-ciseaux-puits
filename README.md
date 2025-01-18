@@ -24,7 +24,7 @@ La meilleure stratégie serait donc de jouer seulement les symboles **Feuille**,
 - Simulation d'une partie de **Pierre Feuille Ciseaux Puits** avec une stratégie donnée.
 - Simulation d'un grand nombre de parties pour évaluer les probabilités de victoire de chaque stratégie.
 - Visualisation des résultats sous forme de fichier texte.
-- Comparaison des stratégies pour déterminer qu'elle est la meilleure. *TODO*
+- Comparaison des stratégies pour déterminer qu'elle est la meilleure.
 
 ## Technologies Utilisées
 

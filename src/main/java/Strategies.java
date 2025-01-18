@@ -1,4 +1,4 @@
-import domain.Strategy;
+import domain.loop.Strategy;
 
 import java.util.List;
 

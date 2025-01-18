@@ -1,4 +1,6 @@
-package domain;
+package domain.loop;
+
+import domain.Result;
 
 public record EndedGameLoop(int nbOfWins1, int nbOfWins2, int nbOfTies, Strategy strat1, Strategy strat2) {
     public Result<Strategy> result() {
@@ -28,4 +30,5 @@ public record EndedGameLoop(int nbOfWins1, int nbOfWins2, int nbOfTies, Strategy
     private int nbOfGames() {
         return nbOfWins1 + nbOfWins2 + nbOfTies;
     }
+
 }

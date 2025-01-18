@@ -1,5 +1,6 @@
-package domain;
+package domain.loop;
 
+import domain.Result;
 import domain.game.Game;
 import domain.game.Player;
 

@@ -1,4 +1,9 @@
-package domain;
+package domain.report;
+
+import domain.Result;
+import domain.Symbol;
+import domain.loop.EndedGameLoop;
+import domain.loop.Strategy;
 
 import java.io.IOException;
 import java.io.Writer;
